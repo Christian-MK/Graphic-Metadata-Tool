@@ -74,7 +74,7 @@ while True:
         pass
 
     elif choice == '3':#Edit Metadata
-        print('This functionality has not yet been released. Stay tuned :)')
+        print('  This functionality has not yet been released. Stay tuned :)')
         pass
 
     #elif choice == '5': #prints audit
