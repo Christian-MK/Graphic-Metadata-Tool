@@ -31,8 +31,8 @@ while True:
         try:
             image = Image.open(image_file)
         except:
-            print('Invalid Entry.')
-            print('Please Restart.')
+            print('  Invalid Entry.')
+            print('    Please Restart.')
             quit()
 
         # dictionary to store metadata keys and value pairs.
@@ -70,7 +70,7 @@ while True:
         print(new_name)     #'new_details.txt'
         #there should be a way to append dictionary key:values to the absolute path/name
         os.rename(old_name, new_name)
-        print("File renamed!")
+        print("  File renamed!")
         pass
 
     elif choice == '3':#Edit Metadata
@@ -81,11 +81,11 @@ while True:
         #script > out.txt     #https://stackoverflow.com/questions/23364096/how-to-write-output-of-terminal-to-file
 
     elif choice == '4':#Exit
-        print('Toodles')
+        print('  Toodles')
         print('======================================================================')
         exit()
 
     else:
-        print('Sorry, that was an invalid option!')
+        print('  Sorry, that was an invalid option!')
 #        quit()
         pass
