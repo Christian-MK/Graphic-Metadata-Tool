@@ -17,7 +17,7 @@ while True:
     print('\n======================================================================')
     print('  Please make a selection')
     print('----------------------------------------------------------------------')
-    print('\n    [1] New File')
+    print('\n    [1] Print Metadata')
     print('    [2] Rename')
     print('    [3] Edit Metadata')
 #    print('    [5] Print Audit')    #script that prints in terminal activity? Would document all changes/choices regarding object
@@ -25,9 +25,13 @@ while True:
     print('\n----------------------------------------------------------------------')
     choice = input('Choice: ')
 
-    if choice == '1':
+    # Don't ask for image if exiting
+    if choice != '4':
+        # Select file
         image_file = input('  Enter File Name:\n    ')
         print("----------------------------------------------------------------------")
+        
+        # Get metadata and store in exif variable
         try:
             image = Image.open(image_file)
         except:
@@ -45,6 +49,10 @@ while True:
             if tag in TAGS:
                 exif[TAGS[tag]] = value
 
+##TODO: Add option to change image
+
+    
+    if choice == '1':
         #checking if image is copyrighted
         try:
             if 'Copyright' in exif:
@@ -54,23 +62,42 @@ while True:
 
         print()
         print("Displaying all embedded metadata of object: \n")
-        print(exif)
+        for metadata in exif:
+            print(metadata + ": " + str(exif[metadata]))
         pass
 
+    # TODO: Check to see if we want to limit which pieces of metadata can be appended to a file rename - need to strip whitespaces and colons
     elif choice == '2':#Rename
-    #https://pynative.com/python-rename-file/#:~:text=Use%20rename()%20method%20of%20an%20OS%20module&text=rename()%20method%20to%20rename,function%20to%20rename%20a%20file.
-        old_name = os.path.abspath(image_file)   #we assigned in 1
-        print(old_name)
-        #disect
-        #x = old_name
-        #y = re.findall(^image_file (\S+).jpg, x)
-        #print(y)
-        #reconstitute
-        new_name = old_name +str(3) #+ str('.jpg') #works. need to write a way to find the last "." and write to the left. or delete .jpg and add after
-        print(new_name)     #'new_details.txt'
-        #there should be a way to append dictionary key:values to the absolute path/name
-        os.rename(old_name, new_name)
-        print("  File renamed!")
+        while True:
+            old_name = os.path.abspath(image_file)   #we assigned in 1
+
+            while True:
+                metadata = input('  Metadata name: \n    ') 
+
+                if metadata not in list(exif.keys()):
+                    print(metadata + " is not a metadata")
+                    print(list(exif.keys()))
+                else:
+                    break
+            
+            val = exif[metadata]
+            # TODO: Replace punctuation and white space with dot or underscore
+            originalName, fileExtension = os.path.splitext(old_name)
+
+            new_name = originalName + "_" + metadata + "_" + str(val) + fileExtension 
+            image.close()
+            os.rename(old_name, new_name)
+            print(new_name)
+            print("  File renamed!")
+            
+            continue_rename = input('  Continue Renaming? (T/F) \n    ') 
+            # TODO: Check they put T or F
+
+            if continue_rename == "F":
+                break
+            else:
+                image_file = new_name
+
         pass
 
     elif choice == '3':#Edit Metadata
