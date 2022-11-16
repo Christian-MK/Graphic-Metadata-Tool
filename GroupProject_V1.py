@@ -15,8 +15,8 @@ current_time = now.strftime("%H:%M:%S")
 import os
 from PIL import Image   # Importing Pillow Python Imaging Library adds support for opening, manipulating, and saving many different image file formats.
 from PIL.ExifTags import TAGS
-
-print('======================================================================')
+print('\nDate:', today)
+print('\n======================================================================')
 print('\n  Welcome to the Image Archival tool developed by Christian & Kelso.')
 while True:
     print('\n======================================================================')
@@ -40,14 +40,14 @@ while True:
             print('  Invalid Entry.')
             print('    Please Restart.')
             quit()
-       
+
         exif = {}    # dictionary to store metadata keys and value pairs.
-       
+
         for tag, value in image._getexif().items():  # iterating over the dictionary
-       
+
             if tag in TAGS:
                 exif[TAGS[tag]] = value  #extarcting all the metadata as key and value pairs and converting them from numerical value to string values
-       
+
         try:
             if 'Copyright' in exif:  #checking if image is copyrighted
                 print("Image is Copyrighted, by ", exif['Copyright'])
@@ -55,7 +55,9 @@ while True:
             pass
 
         print() #   ???whats this for??
-        print("Displaying all embedded metadata of object: \n")
+        print("Displaying all embedded metadata of object:")
+        print("  Time Accessed:", current_time)
+        print(' \n')
         for metadata in exif:
             print(metadata + ": " + str(exif[metadata]))    #Formats output into 2 columns for ease of view
             #Should this be ordered? Alphabetically?
@@ -112,3 +114,4 @@ while True:
         print('  Sorry, that was an invalid option!')
 #        quit()
         pass
+
