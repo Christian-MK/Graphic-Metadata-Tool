@@ -27,6 +27,7 @@ while True:
     print('    [2] Rename')
     print('    [3] Edit Metadata')
 #    print('    [5] Print Audit')    #script that prints in terminal activity? Would document all changes/choices regarding object
+#Maybe this shouldnt be an option. Just a product of the system
     print('    [4] Exit')
     print('\n----------------------------------------------------------------------')
     choice = input('Choice: ')
