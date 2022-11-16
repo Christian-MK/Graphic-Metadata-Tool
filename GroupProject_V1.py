@@ -11,6 +11,13 @@ from PIL import Image
 # Importing Pillow Python Imaging Library:that adds support for opening, manipulating, and saving many different image file formats.
 from PIL.ExifTags import TAGS
 #script = GroupProject_V1.py    #tied to line print function
+
+from datetime import date       #https://stackoverflow.com/questions/32490629/getting-todays-date-in-yyyy-mm-dd-in-python
+from datetime import datetime
+today = str(date.today())
+now = datetime.now()
+current_time = now.strftime("%H:%M:%S")
+#Adds current date and time for auditability 
 print('======================================================================')
 print('\n  Welcome to the Image Archival tool developed by Christian & Kelso.')
 while True:
@@ -41,17 +48,14 @@ while True:
 
         # dictionary to store metadata keys and value pairs.
         exif = {}
-
         # iterating over the dictionary
         for tag, value in image._getexif().items():
-
         #extarcting all the metadata as key and value pairs and converting them from numerical value to string values
             if tag in TAGS:
                 exif[TAGS[tag]] = value
 
 ##TODO: Add option to change image
 
-    
     if choice == '1':
         #checking if image is copyrighted
         try:
@@ -70,10 +74,8 @@ while True:
     elif choice == '2':#Rename
         while True:
             old_name = os.path.abspath(image_file)   #we assigned in 1
-
             while True:
                 metadata = input('  Metadata name: \n    ') 
-
                 if metadata not in list(exif.keys()):
                     print(metadata + " is not a metadata")
                     print(list(exif.keys()))
@@ -97,7 +99,6 @@ while True:
                 break
             else:
                 image_file = new_name
-
         pass
 
     elif choice == '3':#Edit Metadata
