@@ -7,7 +7,7 @@
 import os
 from datetime import date       #Adds current date for auditability
 from datetime import datetime   #Adds current time for auditability
-import piexif #Specialized library used to modify metadata
+import piexif #Specialized library used to modify metadata: https://pypi.org/project/piexif/
 from PIL import Image   #Importing Pillow Python Imaging Library adds support for opening, manipulating, and saving many different image file formats.
 from PIL.ExifTags import TAGS
 
@@ -34,9 +34,7 @@ try:
     image = Image.open(image_file)  #Prevents errors due to invalid inputs
 except:
     print('  Invalid Entry.')
-    audit += '  Invalid Entry.\n'
     print('    Please Restart.')
-    audit += '    Please Restart.\n'
     quit()
 
 exif = {}    #Dictionary to store metadata keys and value pairs.
@@ -199,6 +197,5 @@ while True:
 
     else:
         print('  Sorry, that was an invalid option!')
-        audit += '  Sorry, that was an invalid option!\n'
         pass
 
