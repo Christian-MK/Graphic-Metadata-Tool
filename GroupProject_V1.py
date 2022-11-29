@@ -4,7 +4,7 @@
 #https://medium.com/nerd-for-tech/script-to-extract-image-metadata-using-python-and-pillow-library-53a6ae56ccc3
 
 #Photo metadata is a set of data describing and providing information about rights and administration of an image.
-import os
+import os, re
 from datetime import date       #Adds current date for auditability
 from datetime import datetime   #Adds current time for auditability
 import piexif #Specialized library used to modify metadata
@@ -105,6 +105,8 @@ while True:
                     break
 
             val = exif[metadata]
+            val = re.sub('[/<>:"|?*]', '', val)
+            val = val.replace(" ", '')
             #Edge cases where this wouldn't work - colons and dictionaries
             originalName, fileExtension = os.path.splitext(old_name)
 
@@ -118,10 +120,11 @@ while True:
             continue_rename = input('  Continue Renaming? (T/F) \n    ')
             audit += "  Continue Renaming? (T/F) \n    \n"
             audit += continue_rename + "\n"
+            image_file = os.path.basename(new_name)
             if continue_rename != "T" or continue_rename != "t":
                 break
-            else:
-                image_file = new_name
+            
+                
         pass
 
     elif choice == '3': #Edit metadata 
