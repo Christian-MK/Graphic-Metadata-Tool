@@ -1,4 +1,4 @@
-#Graphic Metadata Tool
+# Graphic Metadata Tool
 Designed to reveale embedded EXIF data and enable file revision
 <br>
 
