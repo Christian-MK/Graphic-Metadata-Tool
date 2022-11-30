@@ -1,8 +1,6 @@
 # Graphic-Metadata-Tool
 A tool for revealing embedded EXIF data in graphic objects and file revision.
 <br>
-<br>
-<br>
 
 The following document outlines the process that users must follow to effectively use this tool in order to improve archival practice relating to graphic objects. 
 <br>
@@ -12,24 +10,27 @@ The following document outlines the process that users must follow to effectivel
 ## Assumptions
 - This tool requires the use of command line / terminal functionality
 - The directions assume that the user is using MacOS
+- The tool is primarily designed for .jpg objects
 <br>
 <br>
 <br>
 
 ## Install requisite libraries
 In order to use this tool, a number of libraries must be installed on the local device
+1. Python3 : https://www.python.org/downloads/
 1. Pillow / PIL : https://pillow.readthedocs.io/en/stable/installation.html
   <br> > pip install --upgrade pip
   <br> > pip install --upgrade Pillow 
 1. Piexif : https://pypi.org/project/piexif/
   <br> > pip install piexif
-1. 
 <br>
 <br>
 <br>
 
 ## Use of Tool
-1. example of text
+1. Open Terminal
+1. Specify directory that you wish to work within
+<br> (*example*) > cd desktop
 <br>
 <br>
 <br>
