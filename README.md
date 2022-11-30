@@ -62,4 +62,3 @@ In order to use this tool, a number of libraries must be installed on the local 
 2. &nbsp; Getting today's date in YYYY-MM-DD in Python, https://stackoverflow.com/questions/32490629/getting-todays-date-in-yyyy-mm-dd-in-python
 3. &nbsp; Rename Files in Python, https://pynative.com/python-rename-file/#:~:text=Use%20rename()%20method%20of%20an%20OS%20module&text=rename()%20method%20to%20rename,function%20to%20rename%20a%20file
 4. &nbsp; Piexif, https://github.com/hMatoba/Piexif
-5. &nbsp; 
