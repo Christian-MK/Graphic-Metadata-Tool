@@ -10,14 +10,20 @@ The following document outlines the process that users must follow to effectivel
 <br>
 
 ## Assumptions
-This tool requires the use of command line functionality.
+- This tool requires the use of command line / terminal functionality
+- The directions assume that the user is using MacOS
 <br>
 <br>
 <br>
 
 ## Install requisite libraries
 In order to use this tool, a number of libraries must be installed on the local device
-1. example of text
+1. Pillow / PIL : https://pillow.readthedocs.io/en/stable/installation.html
+  <br> > pip install --upgrade pip
+  <br> > pip install --upgrade Pillow 
+1. Piexif : https://pypi.org/project/piexif/
+  <br> > pip install piexif
+1. 
 <br>
 <br>
 <br>
@@ -29,4 +35,8 @@ In order to use this tool, a number of libraries must be installed on the local 
 <br>
 
 ## Resources
-1. example of text
+1. Script to extract Image metadata using Python and Pillow library, https://medium.com/nerd-for-tech/script-to-extract-image-metadata-using-python-and-pillow-library-53a6ae56ccc3
+2. Getting today's date in YYYY-MM-DD in Python, https://stackoverflow.com/questions/32490629/getting-todays-date-in-yyyy-mm-dd-in-python
+3. Rename Files in Python, https://pynative.com/python-rename-file/#:~:text=Use%20rename()%20method%20of%20an%20OS%20module&text=rename()%20method%20to%20rename,function%20to%20rename%20a%20file
+4. Piexif, https://github.com/hMatoba/Piexif
+5. 
