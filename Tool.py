@@ -104,7 +104,7 @@ while True:
                 else:
                     break
 
-            val = exif[metadata]
+            val = str(exif[metadata])
             val = re.sub('[/<>:"|?*]', '', val)
             val = val.replace(" ", '')
             #Edge cases where this wouldn't work - colons and dictionaries
@@ -121,10 +121,8 @@ while True:
             audit += "  Continue Renaming? (T/F) \n    \n"
             audit += continue_rename + "\n"
             image_file = os.path.basename(new_name)
-            if continue_rename != "T" or continue_rename != "t":
+            if continue_rename != "T" and continue_rename != "t":
                 break
-            
-                
         pass
 
     elif choice == '3': #Edit metadata 
