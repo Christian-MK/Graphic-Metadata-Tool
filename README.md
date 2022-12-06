@@ -40,19 +40,19 @@ In order to use this tool, a number of libraries must be installed on the local 
 
 | Menu Option | Use |
 |:---:|:---|
-| Print Current Metadata | The embedded metadata associated with the designated graphic object will be printed in a list. <br> The list will appear as elemant : Value pairs |
+| Print Current Metadata | The embedded metadata associated with the designated graphic object will be printed in a list. <br> The list will appear as element : Value pairs |
 | Rename | Users can specify a metadata element to be appended to the end of the current file name. <br> Note: Take care to enter the name of the target element exactly as printed in the list. |
 | Edit Metadata | In the event that the embedded metadata needs to be corrected or augmented, this option allows users to adjust the metadata associated with the object. |
-| Exit | When the user has finished with the target object, selecting this option will close out of the program and result in the production of a .txt file documenting all of the choices made in reation to the object. <br> Note: This .txt file will share a file name with its associated graphic object and will be saved in the same directory. |
+| Exit | When the user has finished with the target object, selecting this option will close out of the program and result in the production of a .txt file documenting all of the choices made in relation to the object. <br> Note: This .txt file will share a file name with its associated graphic object and will be saved in the same directory. |
 
 7. &nbsp; Users progress through the application by typing the menu option number located within the brackets
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; ex.```[1]``` 
-1. &nbsp; It's advised that users proceed sequentially through the menu choices but it isn't required
+1. &nbsp; It's advised that users proceed sequentially through the menu choices, but it isn't required
 1. &nbsp; When finished, select option ```[4]``` to exit the program
 1. &nbsp; For work with additional objects, repeat.
 <br>
 <br>
-<br> Important Note: This program is designed to aid in archival processes relating to graphic objects and because of this takes care to do so transparently. Initiating the program and selecting a target file will result in an auditable .txt file documenting all choices made in relation to the selected object. This file should be kept with its correlated object inorder to make transparent all actions taken on the object.
+<br> Important Note: This program is designed to aid in archival processes relating to graphic objects and because of this takes care to do so transparently. Initiating the program and selecting a target file will result in an auditable .txt file documenting all choices made in relation to the selected object. This file should be kept with its correlated object in order to make transparent all actions taken on the object.
 <br>
 <br>
 <br>
