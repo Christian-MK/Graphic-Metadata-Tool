@@ -42,7 +42,7 @@ In order to use this tool, a number of libraries must be installed on the local 
 |:---:|:---|
 | Print Current Metadata | The embedded metadata associated with the designated graphic object will be printed in a list. <br> The list will appear as element : Value pairs |
 | Rename | Users can specify a metadata element to be appended to the end of the current file name. <br> Note: Take care to enter the name of the target element exactly as printed in the list. |
-| Edit Metadata | In the event that the embedded metadata needs to be corrected or augmented, this option allows users to adjust the metadata associated with the object. |
+| Edit Metadata | In the event that the embedded metadata needs to be corrected or augmented, this option allows users to adjust the metadata associated with the object. Note: when user is asked to name the new (adjusted) file, make sure to add the file extension. |
 | Exit | When the user has finished with the target object, selecting this option will close out of the program and result in the production of a .txt file documenting all of the choices made in relation to the object. <br> Note: This .txt file will share a file name with its associated graphic object and will be saved in the same directory. |
 
 7. &nbsp; Users progress through the application by typing the menu option number located within the brackets
